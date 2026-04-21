@@ -20,3 +20,18 @@ nav a {
 main {
   padding: 20px;
 }
+#resultado {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#resultado div {
+  width: 150px;
+  text-align: center;
+}
+
+#resultado img {
+  width: 100%;
+}
