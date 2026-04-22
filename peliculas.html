@@ -1,13 +1,12 @@
 <main>
-  <h2>Buscar películas</h2>
+  <section class="search-container">
+    <input
+      type="text"
+      id="movieInput"
+      placeholder="Escribe el nombre de una película..."
+    />
+    <button id="searchBtn">Buscar</button>
+  </section>
 
-  <!-- 🔍 BUSCADOR -->
-  <input type="text" id="busqueda" placeholder="Escribe una película" />
-  <button onclick="buscarPeliculas()">Buscar</button>
-
-  <!-- 🎬 RESULTADOS -->
-  <div id="resultado"></div>
+  <section id="results" class="movie-grid"></section>
 </main>
-<body>
-  <script src="interaccion.js"></script>
-</body>
