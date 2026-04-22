@@ -2,7 +2,7 @@
 :root {
   --bg-main: #14181c;
   --bg-card: #2c3440;
-  --green-accent: #ff7e64;
+  --color-accent: #ff7e64;
   --text-white: #ffffff;
   --text-gray: #9ab;
 }
@@ -38,13 +38,12 @@ body {
 }
 
 .nav-links a:hover {
-  color: var(--green-accent);
+  color: var(--color-accent);
 }
 
-/* Rejilla de películas adaptable  */
+/* Rejilla de películas */
 .movie-grid {
   display: grid;
-  /* Esto hace que en móvil se vea 1 columna y en PC se ajusten solas */
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 25px;
   padding: 40px 5%;
@@ -60,7 +59,7 @@ body {
 
 .movie-card:hover {
   transform: scale(1.05);
-  border-color: var(--green-accent);
+  border-color: var(--color-accent);
 }
 
 .movie-card img {
@@ -86,12 +85,20 @@ body {
 }
 
 .btn-fav {
-  background-color: var(--green-accent);
+  background-color: var(--color-accent);
   color: #000;
 }
 .btn-delete {
   background-color: #ff4b4b;
   color: white;
+}
+.home-button {
+  background: var(--color-accent);
+  padding: 15px 30px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 /* Responsive para pantallas pequeñas  */
