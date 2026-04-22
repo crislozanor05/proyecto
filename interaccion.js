@@ -32,7 +32,7 @@ function displayMovies(movies) {
     const card = document.createElement("div");
     card.className = "movie-card";
 
-    // Verificar si hay poster, si no, poner una imagen por defecto
+    // Verificar si hay imagen, poner una por defecto
     const poster =
       movie.Poster !== "N/A"
         ? movie.Poster
@@ -52,7 +52,7 @@ function displayMovies(movies) {
   });
 }
 
-// --- USO DE LOCALSTORAGE (Guardar datos)  ---
+// LOCALSTORAGE (Guardar datos)  ---
 function saveFavorite(movie) {
   // Obtenemos lo que ya hay en LocalStorage o creamos un array vacío
   let favorites = JSON.parse(localStorage.getItem("myMovies")) || [];

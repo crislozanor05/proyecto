@@ -18,9 +18,9 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   color: #fce5e1;
-  font-size:large;
+  font-size: large;
 }
-/* Navegación adaptable  */
+/* Navegación  */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -47,7 +47,7 @@ body {
   color: var(--color-accent);
 }
 
-/* Rejilla de películas */
+/* Grid de películas */
 .movie-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -100,18 +100,19 @@ body {
 }
 .home-button {
   background: var(--color-accent);
-          padding: 15px 30px;
-          color: black;
-          text-decoration: none;
-          border-radius: 5px;
-          font-weight: bold;
-}
-.search-container {
- padding:3rem;
- text-align: center;
+  padding: 15px 30px;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
-/* Responsive para pantallas pequeñas  */
+.search-container {
+  padding: 3rem;
+  text-align: center;
+}
+
+/* Responsive*/
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
