@@ -14,6 +14,11 @@ body {
   margin: 0;
 }
 
+.logo {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: #fce5e1;
+}
 /* Navegación adaptable  */
 .navbar {
   display: flex;
@@ -94,11 +99,15 @@ body {
 }
 .home-button {
   background: var(--color-accent);
-  padding: 15px 30px;
-  color: black;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+          padding: 15px 30px;
+          color: black;
+          text-decoration: none;
+          border-radius: 5px;
+          font-weight: bold;
+}
+.search-container {
+ padding:3rem;
+ text-align: center;
 }
 
 /* Responsive para pantallas pequeñas  */
