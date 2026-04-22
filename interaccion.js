@@ -1,19 +1,14 @@
-/**
- * PROYECTO: BUSCADOR DE PELÍCULAS (Estilo Letterboxd)
- * Requisitos: Fetch [cite: 8], Funciones, Bucles, Objetos  y LocalStorage
- */
-
-// 1. Configuración de la API (OMDB requiere 's=' para búsquedas generales)
+//Configuración de la API
 const API_KEY = "54da2176";
 const BASE_URL = `https://www.omdbapi.com/?apikey=${API_KEY}&s=`;
 
-// --- FUNCIÓN PARA BUSCAR PELÍCULAS (Fetch) [cite: 8] ---
+//buscar pelis
 async function searchMovies(query) {
   try {
     const response = await fetch(BASE_URL + query);
     const data = await response.json();
 
-    // OMDB devuelve los resultados en una propiedad llamada "Search"
+    // devuelve los resultados
     if (data.Response === "True") {
       displayMovies(data.Search);
     } else {
@@ -25,7 +20,7 @@ async function searchMovies(query) {
   }
 }
 
-// --- FUNCIÓN PARA MOSTRAR RESULTADOS (Bucles y DOM) [cite: 6, 9] ---
+// mostrar resultados
 function displayMovies(movies) {
   const container = document.getElementById("results");
   if (!container) return; // Seguridad por si no estamos en la página de búsqueda
@@ -37,7 +32,7 @@ function displayMovies(movies) {
     const card = document.createElement("div");
     card.className = "movie-card";
 
-    // Verificamos si hay poster, si no, ponemos una imagen por defecto
+    // Verificar si hay poster, si no, poner una imagen por defecto
     const poster =
       movie.Poster !== "N/A"
         ? movie.Poster
@@ -49,7 +44,7 @@ function displayMovies(movies) {
                 <h3>${movie.Title}</h3>
                 <p>${movie.Year}</p>
                 <button class="btn-fav" onclick='saveFavorite(${JSON.stringify(movie).replace(/'/g, "&apos;")})'>
-                    ⭐ Añadir a Favoritos
+                    Añadir a Favoritos
                 </button>
             </div>
         `;
@@ -74,7 +69,7 @@ function saveFavorite(movie) {
   }
 }
 
-// --- CARGAR FAVORITOS (Para la página favorites.html) [cite: 7, 10] ---
+// cargar favoritos
 function loadFavorites() {
   const favContainer = document.getElementById("favoritesList");
   if (!favContainer) return;
@@ -118,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Si estamos en la página de favoritos, los cargamos al iniciar
+  // Si estamos en la página de favoritos, los cargar al iniciar
   if (document.getElementById("favoritesList")) {
     loadFavorites();
   }
