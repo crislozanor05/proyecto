@@ -1,12 +1,39 @@
-<main>
-  <section class="search-container">
-    <input
-      type="text"
-      id="movieInput"
-      placeholder="Escribe el nombre de una película..."
-    />
-    <button id="searchBtn">Buscar</button>
-  </section>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieHub - Buscador</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">🎬 MovieHub</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="search.html">Buscar Pelis</a></li>
+          <li><a href="favorites.html">Mis Favoritas</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <section id="results" class="movie-grid"></section>
-</main>
+    <main>
+      <section class="search-container">
+        <h1>Encuentra tu próxima película</h1>
+        <div class="search-box">
+          <input
+            type="text"
+            id="movieInput"
+            placeholder="Ej: Batman, Inception..."
+          />
+          <button id="searchBtn">Buscar</button>
+        </div>
+      </section>
+
+      <section id="results" class="movie-grid"></section>
+    </main>
+
+    <script src="interaccion.js"></script>
+  </body>
+</html>
