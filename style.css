@@ -113,7 +113,34 @@ body {
 }
 
 /*carrusel imagenes*/
-* {box-sizing:border-box}
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  background: #14181c;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 15px;
+  animation: scroll 20s linear infinite; /* Animación constante */
+}
+
+.carousel-track img {
+  height: 300px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+/* Definimos la animación de movimiento */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -128,7 +155,8 @@ body {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -150,8 +178,9 @@ body {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 /* Responsive*/
 @media (max-width: 600px) {

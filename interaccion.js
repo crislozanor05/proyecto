@@ -23,7 +23,7 @@ async function searchMovies(query) {
 // mostrar resultados
 function displayMovies(movies) {
   const container = document.getElementById("results");
-  if (!container) return; // Seguridad por si no estamos en la página de búsqueda
+  if (!container) return;
 
   container.innerHTML = "";
 
@@ -32,7 +32,7 @@ function displayMovies(movies) {
     const card = document.createElement("div");
     card.className = "movie-card";
 
-    // Verificar si hay imagen, poner una por defecto
+    // Verificar si hay imagen
     const poster =
       movie.Poster !== "N/A"
         ? movie.Poster
@@ -52,9 +52,9 @@ function displayMovies(movies) {
   });
 }
 
-// LOCALSTORAGE (Guardar datos)  ---
+// LOCALSTORAGE (Guardar datos)
 function saveFavorite(movie) {
-  // Obtenemos lo que ya hay en LocalStorage o creamos un array vacío
+  // Obtener lo que ya hay en LocalStorage o crear un array vacío
   let favorites = JSON.parse(localStorage.getItem("myMovies")) || [];
 
   // Comprobar si la película ya está en favoritos para no repetirla
@@ -102,7 +102,7 @@ function removeFavorite(id) {
   loadFavorites(); // Recargar la lista
 }
 
-// --- EVENTOS E INICIALIZACIÓN [cite: 6] ---
+// inicio
 document.addEventListener("DOMContentLoaded", () => {
   // Evento para el botón de búsqueda
   const searchBtn = document.getElementById("searchBtn");
@@ -118,3 +118,32 @@ document.addEventListener("DOMContentLoaded", () => {
     loadFavorites();
   }
 });
+
+//carrusel
+async function loadCarousel() {
+  const track = document.getElementById("carousel");
+  if (!track) return;
+
+  // Buscar películas en la api
+  const response = await fetch(
+    `https://www.omdbapi.com/?apikey=54da2176&s=action`,
+  );
+  const data = await response.json();
+
+  if (data.Search) {
+    const movies = [...data.Search, ...data.Search];
+
+    movies.forEach((movie) => {
+      const img = document.createElement("img");
+      img.src =
+        movie.Poster !== "N/A"
+          ? movie.Poster
+          : "https://via.placeholder.com/200x300";
+      img.alt = movie.Title;
+      track.appendChild(img);
+    });
+  }
+}
+
+// Ejecutar al cargar la página
+document.addEventListener("DOMContentLoaded", loadCarousel);
