@@ -14,12 +14,13 @@ body {
   margin: 0;
 }
 
-.logo {
+.logo{
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   color: #fce5e1;
   font-size: large;
 }
+
 /* Navegación  */
 .navbar {
   display: flex;
