@@ -104,7 +104,7 @@ function removeFavorite(id) {
 
 // inicio
 document.addEventListener("DOMContentLoaded", () => {
-  // Evento para el botón de búsqueda
+  // botón de búsqueda
   const searchBtn = document.getElementById("searchBtn");
   if (searchBtn) {
     searchBtn.addEventListener("click", () => {
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Si estamos en la página de favoritos, los cargar al iniciar
+  // Si estamos en la página de favoritos, cargarlos al iniciar
   if (document.getElementById("favoritesList")) {
     loadFavorites();
   }
