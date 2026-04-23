@@ -47,7 +47,7 @@ body {
   color: var(--color-accent);
 }
 
-/* Grid de películas */
+/* Grilla de películas */
 .movie-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -61,6 +61,7 @@ body {
   overflow: hidden;
   transition: transform 0.3s;
   border: 1px solid #456;
+  padding: 10px;
 }
 
 .movie-card:hover {
@@ -92,7 +93,7 @@ body {
 
 .btn-fav {
   background-color: var(--color-accent);
-  color: #000;
+  color: #ffffff;
 }
 .btn-delete {
   background-color: #ff4b4b;
