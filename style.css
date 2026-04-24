@@ -109,6 +109,17 @@ body {
   font-weight: bold;
 }
 
+.search-button{
+  background-color: #ff7e64;
+  border-radius: 5px;
+  padding: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  
+
+}
+
 .search-container {
   padding: 3rem;
   text-align: center;
