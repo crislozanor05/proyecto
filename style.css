@@ -116,8 +116,14 @@ body {
   padding-left: 8px;
   padding-right: 8px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  
+}
 
+.search-input{
+  border-radius: 5px;
+  padding: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .search-container {
