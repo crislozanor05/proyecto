@@ -160,6 +160,7 @@ body {
     transform: translateX(-50%);
   }
 }
+
 /* Responsive*/
 @media (max-width: 600px) {
   .navbar {
