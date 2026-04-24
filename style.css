@@ -151,7 +151,7 @@ body {
   transition: transform 0.3s;
 }
 
-/* animación de movimiento */
+/* animación movimiento */
 @keyframes scroll {
   0% {
     transform: translateX(0);
